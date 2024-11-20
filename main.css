@@ -76,9 +76,9 @@ header {
 
 main p {
     /* font-size: 1.2rem; */
-    font-size: clamp(0.8rem, 4vh, 2rem);
+    font-size: clamp(0.2rem, 4vh, 2rem);
     /* line-height: 1.8; */
-    line-height: calc(1.2rem + 4vh);
+    line-height: calc(1.2rem + 2vh);
     margin: 2rem 0;
     clear: both;
     overflow: auto;
@@ -90,7 +90,9 @@ main p img {
     margin: 0.5rem 1rem 1rem 0;
     /* width: 50%; */
     width: max(50%, 300px);
-    /* min-width:300px; width: 50%; */
-    width: min(50%, 300px);
-    /* max-width: 300px; width: 50%; */
+    /* min-width: 300px;
+    width: 50%; */
+    width: min(50%, 600px);
+    /* max-width: 600px; */
+    /* width: 50%; */
 }
