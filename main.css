@@ -29,6 +29,20 @@ main {
     max-width: 80vw;
 }
 
+.h1lessontext {
+    max-width: 96%;
+    max-height: 96%;
+    /* font-size: 1.3rem; */
+    font-size: clamp(0.2rem, 3vh, 1.3rem);
+    text-align: center;
+    margin: 0px 0 0px 0;
+    padding: 5px;
+    background-color: rgb(43, 173, 199);
+    /* border: 10px solid var(--DARK-COLOR); */
+    border: 5px solid gold;
+    overflow: hidden;
+}
+
 header h1 {
     color: gold;
     font-size: 3.6rem;
@@ -68,30 +82,58 @@ For more: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions
 */
 header {
     display: grid;
+
+    /* The minmax() function is used in CSS Grid to define a grid track with a minimum size and a maximum size. */
     grid-template-columns: minmax(400px, 2fr) 1fr;
+    /* 1.	minmax(400px, 2fr):
+	•	This defines the first column:
+	•	Minimum size: 400px.
+	•	Maximum size: 2fr (two parts of the available free space in the grid).
+	2.	1fr:
+	•	This defines the second column:
+	•	It takes 1 part of the remaining free space in the grid. */
+
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
+
+    overflow: auto;
 }
 
 main p {
+    max-width: 96%;
+    /* width: min(50%, 600px); */
     /* font-size: 1.2rem; */
+    /* The clamp() function combines min() and max() by providing a value range with a preferred value: */
     font-size: clamp(0.2rem, 4vh, 2rem);
+
     /* line-height: 1.8; */
+    /* •	Replace expression with a mathematical formula combining numbers, lengths, percentages, or other units.
+    You can mix different units like px, %, em, vh, etc. */
     line-height: calc(1.2rem + 2vh);
+
     margin: 2rem 0;
     clear: both;
     overflow: auto;
     font-weight: 300;
+
+    /* •	Use overflow to handle content that exceeds the container size: */
+    /* •	Use overflow-wrap to break long text: */
+    overflow: auto;
+    overflow-wrap: break-word;
 }
 
 main p img {
     float: left;
     margin: 0.5rem 1rem 1rem 0;
+
     /* width: 50%; */
+    /* The max() function evaluates a list of comma-separated values and uses the largest value. */
     width: max(50%, 300px);
+
     /* min-width: 300px;
     width: 50%; */
+    /* The min() function evaluates a list of comma-separated values and uses the smallest value. */
     width: min(50%, 600px);
     /* max-width: 600px; */
     /* width: 50%; */
